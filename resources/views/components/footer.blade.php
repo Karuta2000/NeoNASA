@@ -10,27 +10,26 @@
         <div class="row w-100 text-white mx-auto">
             <div class="col-4">
 
-                <ul class="list-group list-group-flushrounded p-2 shadow">
-                    <li class="list-group-item bg-dark text-white list-group-item-dark bg-gradient">View:</li>
-                    <li class="list-group-item list-group-item-dark">Tynk00</li>
-                    <li class="list-group-item list-group-item-dark">Smap01</li>
-                    <li class="list-group-item list-group-item-dark">---</li>
+                <ul class="list-group list-group-flush p-2">
+                    <li class="list-group-item bg-dark text-white"><b>View:</b></li>
+                    <li class="list-group-item bg-dark text-white">Tynk00</li>
+                    <li class="list-group-item bg-dark text-white">Smap01</li>
                 </ul>
             </div>
             <div class="col-4">
-                <ul class="list-group list-group-flushrounded p-2 shadow">
-                    <li class="list-group-item bg-dark text-white list-group-item-dark bg-gradient">Model:</li>
-                    <li class="list-group-item list-group-item-dark">Tatv00</li>
-                    <li class="list-group-item list-group-item-dark">Vanm34</li>
-                    <li class="list-group-item list-group-item-dark">Mudp01</li>
+                <ul class="list-group list-group-flush p-2">
+                    <li class="list-group-item bg-dark text-white"><b>Model:</b></li>
+                    <li class="list-group-item bg-dark text-white">Tatv00</li>
+                    <li class="list-group-item bg-dark text-white">Vanm34</li>
+                    <li class="list-group-item bg-dark text-white">Mudp01</li>
                 </ul>
             </div>
             <div class="col-4">
-                <ul class="list-group list-group-flushrounded p-2 shadow">
-                    <li class="list-group-item bg-dark text-white  list-group-item-dark bg-gradient">Controller:</li>
-                    <li class="list-group-item list-group-item-dark">Engt01</li>
-                    <li class="list-group-item list-group-item-dark">Jezf00</li>
-                    <li class="list-group-item list-group-item-dark">Birs03</li>
+                <ul class="list-group list-group-flush p-2">
+                    <li class="list-group-item bg-dark text-white"><b>Controller:</b></li>
+                    <li class="list-group-item bg-dark text-white">Engt01</li>
+                    <li class="list-group-item bg-dark text-white">Jezf00</li>
+                    <li class="list-group-item bg-dark text-white">Birs03</li>
                 </ul>
 
             </div>
