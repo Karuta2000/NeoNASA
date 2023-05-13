@@ -8,29 +8,24 @@
     </div>
     <div class="card-body">
 
-        <ul class="list-group">
-            @foreach ($galaxies as $galaxy)
-            @endforeach
-
+        <div class="list-group">
             @if ($galaxies->count() > 0)
                 @foreach ($galaxies as $galaxy)
-                    <a href="{{ route('galaxies.show', $galaxy->id) }}">
-                        <li class="list-group-item">
-                            <div class="d-flex align-items-start">
-                                <img src="{{ $galaxy->image_url }}" class="me-3" alt="Placeholder image" width="50"
-                                    height="50">
-                                <div class="flex-grow-1">
-                                    <h5>{{ $galaxy->name }} - {{ $galaxy->size }}</h5>
-                                </div>
+                    <a class="list-group-item list-group-item-action" href="{{ route('galaxies.show', $galaxy->id) }}">
+                        <div class="d-flex align-items-start">
+                            <img src="{{ $galaxy->image_url }}" class="me-3" alt="Placeholder image" width="50"
+                                height="50" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png';">
+                            <div class="flex-grow-1 align-middle">
+                                <h5 class="align-middle">{{ $galaxy->name }}</h5>
                             </div>
-                        </li>
+                        </div>
                     </a>
                 @endforeach
             @else
                 Nenalezena žádná galaxie :(
             @endif
 
-        </ul>
+        </div>
         <hr>
         <a class="btn btn-dark" href="{{ route('galaxies.create') }}">Add Galaxy</a>
     </div>

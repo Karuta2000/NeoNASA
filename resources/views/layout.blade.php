@@ -9,14 +9,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/3919/3919942.png">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/256/1534/1534067.png">
     <title>NeoNASA</title>
 </head>
 
 <body class="bg-dark bg-gradient">
-    <div class="py-0" style="background-image: url('{{url('/images/background.jpg')}}');">
+    <div class="py-0" style="background-image: url('https://images2.alphacoders.com/521/521477.jpg'); background-attachment: fixed;">
         <x-navbar />
-        <div class="container bg-light py-5 shadow-lg" style="min-height: 90vh;">
+        <div class="container bg-light bg-gradient py-5 shadow-lg" style="min-height: 90vh">
             <div class="card shadow rounded p-0">
 
                 @yield('content')

@@ -15,6 +15,9 @@
             <input class="form-control" type="text" name="gps_3d_coordinates" id="gps_3d_coordinates"
                 value="{{ $space_station->gps_3d_coordinates }}" required>
             <br>
+            <label for="description" class="form-label">Description:</label>
+            <textarea class="form-control" name="description" id="description">{{ $space_station->description }}</textarea>
+            <br>
             <label class="form-label" for="image_url">Image URL:</label>
             <input class="form-control" type="text" name="image_url" id="image_url" value="{{ $space_station->image_url }}" required>
             <br>

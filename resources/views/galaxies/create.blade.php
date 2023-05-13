@@ -16,7 +16,7 @@
             <input type="text" class="form-control" name="size" id="size" required>
             <br>
             <label for="description" class="form-label">Description:</label>
-            <textarea class="form-control" name="description" id="description" required></textarea>
+            <textarea class="form-control" name="description" id="description"></textarea>
             <br>
             <label for="image_url" class="form-label">Image URL:</label>
             <input type="text" class="form-control" name="image_url" id="image_url" required>

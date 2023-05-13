@@ -10,9 +10,14 @@
                 <div class="bg-dark text-white rounded p-2 py-4">
                     <p>Size: {{ $galaxy->size }}</p>
                     <p>
+                        @if(is_null($galaxy->description))
+                        Bez popisku
+                        @else
                         {{ $galaxy->description }}
+                        @endif
+
                     </p>
-                    <img class="mt-3 w-100 shadow" src="{{ $galaxy->image_url }}" alt="{{ $galaxy->name }}">
+                    <img class="mt-3 w-100 shadow" src="{{ $galaxy->image_url }}" alt="{{ $galaxy->name }}" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png';">
                 </div>
 
             </div>

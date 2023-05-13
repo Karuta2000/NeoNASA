@@ -13,6 +13,9 @@
             <label for="gps_3d_coordinates" class="form-label">3D GPS Coordinates:</label>
             <input type="text" class="form-control" name="gps_3d_coordinates" id="gps_3d_coordinates" required>
             <br>
+            <label for="description" class="form-label">Description:</label>
+            <textarea class="form-control" name="description" id="description"></textarea>
+            <br>
             <label for="image_url" class="form-label">Image URL:</label>
             <input type="text" class="form-control" name="image_url" id="image_url" required>
             <br>

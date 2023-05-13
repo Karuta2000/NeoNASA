@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark text-bg-dark sticky-top shadow-sm" data-bs-theme="dark">
     <div class="container-fluid py-1">
         <a class="navbar-brand me-1" href="/">
-            <img src="https://cdn-icons-png.flaticon.com/512/3919/3919942.png" alt="Logo" width="30"
+            <img src="https://cdn-icons-png.flaticon.com/256/1534/1534067.png" alt="Logo" width="30"
                 height="30" class="d-inline-block align-text-top">
             NeoNASA
         </a>
