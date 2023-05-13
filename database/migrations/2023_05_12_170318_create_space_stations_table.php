@@ -16,8 +16,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('gps_3d_coordinates');
             $table->text('image_url');
+            $table->string('description', 400)->nullable();
             $table->unsignedBigInteger('galaxy_id');
-            $table->foreign('galaxy_id')->references('id')->on('galaxies');
+            $table->foreign('galaxy_id')->references('id')->on('galaxies')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
     }

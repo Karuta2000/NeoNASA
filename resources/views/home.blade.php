@@ -18,5 +18,6 @@
             Celkově
             tato aplikace umožňuje uživatelům procházet a prohlížet informace o různých SS a GX.
         </p>
+        <img src="https://astronomy.com/-/media/Images/News%20and%20Observing/News/2021/09/Starsinthesky.jpg?mw=600" alt="" class="w-100">
     </div>
 @endsection

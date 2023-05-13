@@ -1,21 +1,28 @@
 @extends('layout')
 
 @section('content')
-    <h1>Edit Galaxy</h1>
-    <form action="{{ route('galaxies.update', $galaxy->id) }}" method="post">
-        @csrf
-        @method('PUT')
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" value="{{ $galaxy->name }}" required>
-        <br>
-        <label for="size">Size:</label>
-        <input type="text" name="size" id="size" value="{{ $galaxy->size }}" required>
-        <br>
-        <label for="image_url">Image
-        <label for="image_url">Image URL:</label>
-        <input type="text" name="image_url" id="image_url" value="{{ $galaxy->image_url }}" required>
-        <br>
-        <button type="submit">Update</button>
-    </form>
+    <div class="card-header bg-dark text-white">
+        <h1 class="card-title">Edit Galaxy</h1>
+    </div>
+    <div class="card-body">
+        <form action="{{ route('galaxies.update', $galaxy->id) }}" method="post">
+            @csrf
+            @method('PUT')
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" name="name" id="name" value="{{ $galaxy->name }}" required>
+            <br>
+            <label for="size" class="form-label">Size:</label>
+            <input type="text" class="form-control" name="size" id="size" value="{{ $galaxy->size }}" required>
+            <br>
+            <label for="description" class="form-label">Description:</label>
+            <textarea class="form-control" name="description" id="description" required>{{ $galaxy->description }}</textarea>
+            <br>
+            <label for="image_url" class="form-label">Image</label>
+            <label for="image_url" class="form-label">Image URL:</label>
+            <input type="text" class="form-control" name="image_url" id="image_url" value="{{ $galaxy->image_url }}"
+                required>
+            <br>
+            <button class="btn btn-dark" type="submit">Update</button>
+        </form>
+    </div>
 @endsection
-

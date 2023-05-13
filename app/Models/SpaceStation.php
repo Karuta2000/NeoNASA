@@ -9,7 +9,7 @@ class SpaceStation extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'gps_3d_coordinates', 'image_url', 'galaxy_id'];
+    protected $fillable = ['name', 'gps_3d_coordinates', 'image_url', 'description', 'galaxy_id'];
 
     public function galaxy()
     {

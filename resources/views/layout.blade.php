@@ -14,7 +14,7 @@
 </head>
 
 <body class="bg-dark bg-gradient">
-    <div class="py-0" style="background-image: url('https://wallpapers.com/images/featured/lt47o5qub95qmqkx.jpg');">
+    <div class="py-0" style="background-image: url('{{url('/images/background.jpg')}}');">
         <x-navbar />
         <div class="container bg-light py-5 shadow-lg" style="min-height: 90vh;">
             <div class="card shadow rounded p-0">

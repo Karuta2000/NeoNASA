@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="card-header">
+    <div class="card-header bg-dark text-white">
         <h1>Add Galaxy</h1>
     </div>
 
@@ -9,16 +9,19 @@
 
         <form action="{{ route('galaxies.store') }}" method="post">
             @csrf
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" required>
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" name="name" id="name" required>
             <br>
-            <label for="size">Size:</label>
-            <input type="text" name="size" id="size" required>
+            <label for="size" class="form-label">Size:</label>
+            <input type="text" class="form-control" name="size" id="size" required>
             <br>
-            <label for="image_url">Image URL:</label>
-            <input type="text" name="image_url" id="image_url" required>
+            <label for="description" class="form-label">Description:</label>
+            <textarea class="form-control" name="description" id="description" required></textarea>
             <br>
-            <button type="submit">Add</button>
+            <label for="image_url" class="form-label">Image URL:</label>
+            <input type="text" class="form-control" name="image_url" id="image_url" required>
+            <br>
+            <button class="btn btn-dark" type="submit">Add</button>
         </form>
     </div>
 @endsection

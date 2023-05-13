@@ -41,9 +41,10 @@ class SpaceStationController extends Controller
         return view('space_stations.show', compact('space_station'));
     }
 
-    public function edit(SpaceStation $spaceStation)
+    public function edit(SpaceStation $space_station)
     {
-        return view('space_stations.edit', compact('spaceStation'));
+        $galaxies = Galaxy::all();
+        return view('space_stations.edit', compact('space_station', 'galaxies'));
     }
 
     public function update(Request $request, SpaceStation $spaceStation)
