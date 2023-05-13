@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\SpaceStation;
+use App\Models\Galaxy;
 use Illuminate\Http\Request;
 
 class SpaceStationController extends Controller
@@ -16,7 +17,8 @@ class SpaceStationController extends Controller
 
     public function create()
     {
-        return view('space_stations.create');
+        $galaxies = Galaxy::all();
+        return view('space_stations.create', compact('galaxies'));
     }
 
     public function store(Request $request)
@@ -34,9 +36,9 @@ class SpaceStationController extends Controller
                          ->with('success', 'Space Station created successfully.');
     }
 
-    public function show(SpaceStation $spaceStation)
+    public function show(SpaceStation $space_station)
     {
-        return view('space_stations.show', compact('spaceStation'));
+        return view('space_stations.show', compact('space_station'));
     }
 
     public function edit(SpaceStation $spaceStation)

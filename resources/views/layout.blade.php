@@ -13,15 +13,18 @@
     <title>NeoNASA</title>
 </head>
 
-<body class="bg-light bg-gradient">
-    <x-navbar/>
-    <div class="container" style="min-height: 80vh;">
-        <div class="card shadow rounded my-5 p-0">
+<body class="bg-dark bg-gradient">
+    <div class="py-0" style="background-image: url('https://wallpapers.com/images/featured/lt47o5qub95qmqkx.jpg');">
+        <x-navbar />
+        <div class="container bg-light py-5 shadow-lg" style="min-height: 90vh;">
+            <div class="card shadow rounded p-0">
 
-            @yield('content')
+                @yield('content')
+            </div>
         </div>
+        <x-footer />
     </div>
-    <x-footer/>
+
 </body>
 
 </html>
