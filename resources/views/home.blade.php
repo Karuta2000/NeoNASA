@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="card-header bg-dark text-white">
+    <div class="card-header bg-space text-white">
         <h1>Vítejte v aplikaci NeoNASA</h1>
     </div>
 

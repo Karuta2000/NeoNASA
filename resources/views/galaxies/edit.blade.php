@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="card-header bg-dark text-white">
+    <div class="card-header bg-space text-white">
         <h1 class="card-title">Edit Galaxy</h1>
     </div>
     <div class="card-body">
@@ -22,7 +22,7 @@
             <input type="text" class="form-control" name="image_url" id="image_url" value="{{ $galaxy->image_url }}"
                 required>
             <br>
-            <button class="btn btn-dark" type="submit">Update</button>
+            <button class="btn btn-space" type="submit">Update</button>
         </form>
     </div>
 @endsection

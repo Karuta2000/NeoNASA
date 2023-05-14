@@ -1,6 +1,6 @@
-<footer class="bg-dark py-1">
+<footer class="bg-space py-1">
     <div class="container d-flex justify-content-center pb-1">
-        <a href="https://github.com/Karuta2000/NeoNasa" class="btn btn-dark text-light btn-lg btn-floating mx-2">
+        <a href="https://github.com/Karuta2000/NeoNasa" class="btn btn-space text-light btn-lg btn-floating mx-2">
             <i class="fa fa-github" aria-hidden="true"></i>
         </a>
     </div>
@@ -11,25 +11,25 @@
             <div class="col-4">
 
                 <ul class="list-group list-group-flush p-2">
-                    <li class="list-group-item bg-dark text-white"><b>View:</b></li>
-                    <li class="list-group-item bg-dark text-white">Tynk00</li>
-                    <li class="list-group-item bg-dark text-white">Smap01</li>
+                    <li class="list-group-item bg-space text-white"><b>View:</b></li>
+                    <li class="list-group-item bg-space text-white">Tynk00</li>
+                    <li class="list-group-item bg-space text-white">Smap01</li>
                 </ul>
             </div>
             <div class="col-4">
                 <ul class="list-group list-group-flush p-2">
-                    <li class="list-group-item bg-dark text-white"><b>Model:</b></li>
-                    <li class="list-group-item bg-dark text-white">Tatv00</li>
-                    <li class="list-group-item bg-dark text-white">Vanm34</li>
-                    <li class="list-group-item bg-dark text-white">Mudp01</li>
+                    <li class="list-group-item bg-space text-white"><b>Model:</b></li>
+                    <li class="list-group-item bg-space text-white">Tatv00</li>
+                    <li class="list-group-item bg-space text-white">Vanm34</li>
+                    <li class="list-group-item bg-space text-white">Mudp01</li>
                 </ul>
             </div>
             <div class="col-4">
                 <ul class="list-group list-group-flush p-2">
-                    <li class="list-group-item bg-dark text-white"><b>Controller:</b></li>
-                    <li class="list-group-item bg-dark text-white">Engt01</li>
-                    <li class="list-group-item bg-dark text-white">Jezf00</li>
-                    <li class="list-group-item bg-dark text-white">Birs03</li>
+                    <li class="list-group-item bg-space text-white"><b>Controller:</b></li>
+                    <li class="list-group-item bg-space text-white">Engt01</li>
+                    <li class="list-group-item bg-space text-white">Jezf00</li>
+                    <li class="list-group-item bg-space text-white">Birs03</li>
                 </ul>
 
             </div>

@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="card-header bg-dark text-white">
+    <div class="card-header bg-space text-white">
         <h1>Add Galaxy</h1>
     </div>
 
@@ -21,7 +21,7 @@
             <label for="image_url" class="form-label">Image URL:</label>
             <input type="text" class="form-control" name="image_url" id="image_url" required>
             <br>
-            <button class="btn btn-dark" type="submit">Add</button>
+            <button class="btn btn-space" type="submit">Add</button>
         </form>
     </div>
 @endsection

@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="card-header bg-dark text-white">
+    <div class="card-header bg-space text-white">
         <h1 class="card-title">
             Galaxies
         </h1>
@@ -27,6 +27,6 @@
 
         </div>
         <hr>
-        <a class="btn btn-dark" href="{{ route('galaxies.create') }}">Add Galaxy</a>
+        <a class="btn btn-space" href="{{ route('galaxies.create') }}">Add Galaxy</a>
     </div>
 @endsection

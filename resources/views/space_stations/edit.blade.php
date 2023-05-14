@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="card-header bg-dark text-white">
+    <div class="card-header bg-space text-white">
         <h1 class="card-title">Edit Space Station</h1>
     </div>
     <div class="card-body">
@@ -29,7 +29,7 @@
                 @endforeach
             </select>
             <br>
-            <button class="btn btn-dark" type="submit">Update</button>
+            <button class="btn btn-space" type="submit">Update</button>
         </form>
     </div>
 @endsection

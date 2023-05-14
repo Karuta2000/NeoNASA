@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark text-bg-dark sticky-top shadow-sm" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-space text-bg-dark sticky-top shadow-sm" data-bs-theme="dark">
     <div class="container-fluid py-1">
         <a class="navbar-brand me-1" href="/">
             <img src="https://cdn-icons-png.flaticon.com/256/1534/1534067.png" alt="Logo" width="30"
@@ -20,11 +20,11 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link btn btn-dark bg-body-secondary px-3" href="/galaxies">Galaxie</a>
+                    <a class="nav-link btn btn-space bg-body-secondary px-3" href="/galaxies">Galaxie</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link btn btn-dark px-3 ms-1" href="/space_stations">Vesmírné
+                    <a class="nav-link btn btn-space px-3 ms-1" href="/space_stations">Vesmírné
                         stanice</a>
                 </li>
             </ul>

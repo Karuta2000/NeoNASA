@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="card-header bg-dark text-white">
+    <div class="card-header bg-space text-white">
         <h1 class="card-title">
             Vesmírné stanice
         </h1>
@@ -29,6 +29,6 @@
 
         </ul>
         <hr>
-        <a class="btn btn-dark" href="{{ route('space_stations.create') }}">Add Space Station</a>
+        <a class="btn btn-space" href="{{ route('space_stations.create') }}">Add Space Station</a>
     </div>
 @endsection

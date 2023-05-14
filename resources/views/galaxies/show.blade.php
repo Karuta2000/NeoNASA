@@ -1,13 +1,13 @@
 @extends('layout')
 
 @section('content')
-    <div class="card-header bg-dark text-white">
+    <div class="card-header bg-space text-white">
         <h1 class="card-title">{{ $galaxy->name }}</h1>
     </div>
     <div class="card-body">
         <div class="row">
             <div class="col-6">
-                <div class="bg-dark text-white rounded p-2 py-4">
+                <div class="bg-space text-white rounded p-2 py-4">
                     <p>Size: {{ $galaxy->size }}</p>
                     <p>
                         @if(is_null($galaxy->description))
@@ -68,7 +68,7 @@
                             </div>
 
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Zrušit</button>
+                                <button type="button" class="btn btn-space" data-bs-dismiss="modal">Zrušit</button>
                                 <button type="submit" class="btn btn-danger">Odstranit</button>
                             </div>
                         </div>

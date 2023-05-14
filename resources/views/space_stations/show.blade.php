@@ -1,13 +1,13 @@
 @extends('layout')
 
 @section('content')
-    <div class="card-header bg-dark text-white">
+    <div class="card-header bg-space text-white">
         <h1 class="card-title">{{ $space_station->name }}</h1>
     </div>
     <div class="card-body">
         <div class="row">
             <div class="col-6">
-                <div class="bg-dark text-white rounded p-2 py-4">
+                <div class="bg-space text-white rounded p-2 py-4">
                     <p>3D GPS Coordinates: {{ $space_station->gps_3d_coordinates }}</p>
                     <p>
                         @if(is_null($space_station->description))

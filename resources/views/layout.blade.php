@@ -12,10 +12,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/256/1534/1534067.png">
     <title>NeoNASA</title>
+
+    <style>
+        .bg-space {
+            background-color: #310047 !important;
+        }
+
+        .btn-space {
+            background-color: #310047 !important;
+            color: white;
+        }
+
+        .btn-space:hover {
+            color: white;
+            background-color: #4f0f6d !important;
+        }
+
+        .btn-space:active {
+            color: white;
+            background-color: #4f0f6d !important;
+        }
+
+    </style>
 </head>
 
-<body class="bg-dark bg-gradient">
-    <div class="py-0" style="background-image: url('https://images2.alphacoders.com/521/521477.jpg'); background-attachment: fixed;">
+<body class="bg-space bg-gradient">
+    <div class="py-0"
+        style="background-image: url('https://images2.alphacoders.com/521/521477.jpg'); background-attachment: fixed;">
         <x-navbar />
         <div class="container bg-light bg-gradient py-5 shadow-lg" style="min-height: 90vh">
             <div class="card shadow rounded p-0">
