@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="bg-space rounded text-white shadow p-3 mb-3">
-        <h1 class="card-title">{{ $space_station->name }}</h1>
+        <h1>{{ $space_station->name }}</h1>
     </div>
     <div class="bg-space rounded text-white shadow p-3 mb-3">
         <div class="row">

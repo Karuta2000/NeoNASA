@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="bg-space rounded text-white shadow p-3 mb-3">
-        <h1 class="card-title">{{ $galaxy->name }}</h1>
+        <h1>{{ $galaxy->name }}</h1>
     </div>
     <div class="bg-space rounded text-white shadow p-3 mb-3">
         <div class="row">
@@ -18,7 +18,7 @@
 
                     </p>
                 </div>
-                <img class="mt-2 mx-2 rounded w-100 shadow" src="{{ $galaxy->image_url }}" alt="{{ $galaxy->name }}"
+                <img class="mt-2 rounded w-100 shadow" src="{{ $galaxy->image_url }}" alt="{{ $galaxy->name }}"
                 onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png';">
 
 
@@ -52,7 +52,7 @@
             <a class="btn btn-warning" href="{{ route('galaxies.edit', $galaxy->id) }}">Edit</a>
 
             @if ($galaxy->spaceStations->count() > 0)
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                <button type="button" class="btn btn-danger ms-2" data-bs-toggle="modal"
                     data-bs-target="#deleteModal">Delete</button>
                 <div class="modal fade" id="deleteModal" tabindex="1" aria-labelledby="deleteModalLabel"
                     aria-hidden="true">
@@ -63,7 +63,7 @@
                                 <button type="button" class="btn-close text-white" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
-                            <div class="modal-body">
+                            <div class="modal-body text-dark">
                                 Všechny stanice uvnitř této galaxie budou ztraceny! <br>
                                 Tato galaxie obsahuje následující počet vesmírných stanic:
                                 {{ $galaxy->spaceStations->count() }}<br>
@@ -78,7 +78,7 @@
                     </div>
                 </div>
             @else
-                <button class="btn btn-danger" type="submit">Delete</button>
+                <button class="btn btn-danger ms-2" type="submit">Delete</button>
             @endif
 
         </form>

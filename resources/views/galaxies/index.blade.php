@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="bg-space rounded text-white shadow p-3 mb-3">
-        <h1 class="card-title">
+        <h1>
             Galaxies
         </h1>
     </div>

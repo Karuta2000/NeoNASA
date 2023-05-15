@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="bg-space rounded text-white shadow p-3 mb-3">
-        <h1 class="card-title">Edit Space Station</h1>
+        <h1>Edit Space Station</h1>
     </div>
     <div class="bg-space rounded text-white shadow p-3 mb-3">
         <form action="{{ route('space_stations.update', $space_station->id) }}" method="post">
