@@ -6,7 +6,7 @@
     </div>
     <div class="bg-space rounded text-white shadow p-3 mb-3">
         <div class="row">
-            <div class="col-6">
+            <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
                 <div>
                     <p class="bg-light text-dark rounded p-2">3D GPS Coordinates: {{ $space_station->gps_3d_coordinates }}
                     </p>
@@ -23,7 +23,7 @@
 
 
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-md-12 col-sm-12 mb-3">
                 <h3 class="mb-3">Galaxy:</h3>
                 <div class="list-group">
                     <a class="list-group-item list-group-item-action"
@@ -41,24 +41,30 @@
 
             </div>
         </div>
-        <hr>
 
-        <form action="{{ route('space_stations.destroy', $space_station->id) }}" method="post">
-            @csrf
-            @method('DELETE')
-            <div class="btn-group dropup">
-                <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Actions
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{{ route('space_stations.edit', $space_station->id) }}"><i class="fa fa-pencil" aria-hidden="true"></i>
-                         Edit</a></li>
+
+        <div class="btn-group dropup">
+            <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Actions
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{ route('space_stations.edit', $space_station->id) }}"><i
+                            class="fa fa-pencil" aria-hidden="true"></i>
+                        Edit</a></li>
+                <form action="{{ route('space_stations.copy', $space_station->id) }}" method="post">
+                    @csrf
+                    <li><button class="dropdown-item" type="submit"><i class="fa fa-clone" aria-hidden="true"></i>
+                            Copy</button></li>
+                </form>
+                <form action="{{ route('space_stations.destroy', $space_station->id) }}" method="post">
+                    @csrf
+                    @method('DELETE')
                     <li><button class="dropdown-item" type="submit"><i class="fa fa-trash" aria-hidden="true"></i>
-                         Delete</button></li>
-                </ul>
-            </div>
-        </form>
+                            Delete</button></li>
+                </form>
+            </ul>
+        </div>
+
 
 
 

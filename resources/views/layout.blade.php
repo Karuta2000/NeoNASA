@@ -43,7 +43,7 @@
         }
 
         .toast-space {
-            background-color: #5a147aa9 !important;
+            background-color: #5a147a !important;
             color: white
         }
     </style>

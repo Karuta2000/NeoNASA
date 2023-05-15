@@ -14,7 +14,7 @@
                     <a class="list-group-item list-group-item-action"
                         href="{{ route('space_stations.show', $space_station->id) }}">
                         <div class="d-flex align-items-start">
-                            <img src="{{ $space_station->image_url }}" class="me-3" alt="Placeholder image" width="50"
+                            <img src="{{ $space_station->image_url }}" class="me-3 rounded shadow" alt="Placeholder image" width="50"
                                 height="50"
                                 onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png';">
                             <div class="flex-grow-1 align-middle">

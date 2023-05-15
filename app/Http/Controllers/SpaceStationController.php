@@ -68,4 +68,25 @@ class SpaceStationController extends Controller
         return redirect()->route('space_stations.index')
                          ->with('message', 'Space Station deleted successfully.');
     }
+
+    public function copy($id)
+    {
+        $newSpaceStation = new SpaceStation();
+
+        $spaceStation = SpaceStation::findOrFail($id);
+
+        $newSpaceStation->name = $spaceStation->name;
+        $newSpaceStation->description = $spaceStation->description;
+        $newSpaceStation->image_url = $spaceStation->image_url;
+        $newSpaceStation->galaxy_id = $spaceStation->galaxy_id;
+        $newSpaceStation->gps_3d_coordinates = $spaceStation->gps_3d_coordinates;
+
+        $newSpaceStation->save();
+        
+
+        return redirect()->route('space_stations.index')
+                         ->with('message', 'Space Station copied successfully.');
+    }
+
+
 }

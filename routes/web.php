@@ -28,3 +28,4 @@ Route::get('/dashboard', function () {
 Route::resource('galaxies', GalaxyController::class);
 Route::resource('space_stations', SpaceStationController::class);
 
+Route::post('/space_stations/copy/{space_stations}',  [SpaceStationController::class, 'copy'])->name('space_stations.copy');
