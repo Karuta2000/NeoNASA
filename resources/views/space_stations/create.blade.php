@@ -1,10 +1,10 @@
 @extends('layout')
 
 @section('content')
-    <div class="card-header bg-space text-white">
+    <div class="bg-space rounded text-white shadow p-3 mb-3">
         <h1>Add Space Station</h1>
     </div>
-    <div class="card-body">
+    <div class="bg-space rounded text-white shadow p-3 mb-3">
         <form action="{{ route('space_stations.store') }}" method="post">
             @csrf
             <label for="name" class="form-label">Name:</label>
@@ -26,7 +26,7 @@
                 @endforeach
             </select>
             <br>
-            <button class="btn btn-space mt-3" type="submit">Add</button>
+            <button class="btn btn-light mt-2" type="submit">Add</button>
         </form>
     </div>
 @endsection

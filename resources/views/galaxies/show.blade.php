@@ -1,40 +1,42 @@
 @extends('layout')
 
 @section('content')
-    <div class="card-header bg-space text-white">
+    <div class="bg-space rounded text-white shadow p-3 mb-3">
         <h1 class="card-title">{{ $galaxy->name }}</h1>
     </div>
-    <div class="card-body">
+    <div class="bg-space rounded text-white shadow p-3 mb-3">
         <div class="row">
             <div class="col-6">
-                <div class="bg-space text-white rounded p-2 py-4">
-                    <p>Size: {{ $galaxy->size }}</p>
-                    <p>
-                        @if(is_null($galaxy->description))
-                        Bez popisku
+                <div>
+                    <p class="bg-light text-dark rounded p-2">Size: {{ $galaxy->size }}</p>
+                    <p class="bg-light text-dark rounded p-2">
+                        @if (is_null($galaxy->description))
+                            Bez popisku
                         @else
-                        {{ $galaxy->description }}
+                            {{ $galaxy->description }}
                         @endif
 
                     </p>
-                    <img class="mt-3 w-100 shadow" src="{{ $galaxy->image_url }}" alt="{{ $galaxy->name }}" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png';">
                 </div>
+                <img class="mt-2 mx-2 rounded w-100 shadow" src="{{ $galaxy->image_url }}" alt="{{ $galaxy->name }}"
+                onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png';">
+
 
             </div>
             <div class="col-6">
-                <h3>Space Stations ({{ $galaxy->spaceStations->count() }}):</h3>
+                <h3 class="mb-3">Space Stations ({{ $galaxy->spaceStations->count() }}):</h3>
                 <ul class="list-group">
                     @foreach ($galaxy->spaceStations as $space_station)
-                        <a href="{{ route('space_stations.show', $space_station->id) }}">
-                            <li class="list-group-item">
-                                <div class="d-flex align-items-start">
-                                    <img src="{{ $space_station->image_url }}" class="me-3" alt="Placeholder image"
-                                        width="50" height="50">
-                                    <div class="flex-grow-1">
-                                        <h5>{{ $space_station->name }}</h5>
-                                    </div>
+                        <a href="{{ route('space_stations.show', $space_station->id) }}"
+                            class="list-group-item list-group-item-action">
+                            <div class="d-flex align-items-start">
+                                <img src="{{ $space_station->image_url }}" class="me-3 rounded shadow"
+                                    alt="Placeholder image" width="50" height="50"
+                                    onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png';">
+                                <div class="flex-grow-1">
+                                    <h5>{{ $space_station->name }}</h5>
                                 </div>
-                            </li>
+                            </div>
                         </a>
                     @endforeach
                 </ul>
@@ -50,7 +52,8 @@
             <a class="btn btn-warning" href="{{ route('galaxies.edit', $galaxy->id) }}">Edit</a>
 
             @if ($galaxy->spaceStations->count() > 0)
-                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">Delete</button>
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                    data-bs-target="#deleteModal">Delete</button>
                 <div class="modal fade" id="deleteModal" tabindex="1" aria-labelledby="deleteModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">

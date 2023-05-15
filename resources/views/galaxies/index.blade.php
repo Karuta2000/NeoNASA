@@ -1,12 +1,12 @@
 @extends('layout')
 
 @section('content')
-    <div class="card-header bg-space text-white">
+    <div class="bg-space rounded text-white shadow p-3 mb-3">
         <h1 class="card-title">
             Galaxies
         </h1>
     </div>
-    <div class="card-body">
+    <div class="bg-space rounded text-white shadow p-3 mb-3">
 
         <div class="list-group">
             @if ($galaxies->count() > 0)
@@ -27,6 +27,6 @@
 
         </div>
         <hr>
-        <a class="btn btn-space" href="{{ route('galaxies.create') }}">Add Galaxy</a>
+        <a class="btn btn-light" href="{{ route('galaxies.create') }}">Add Galaxy</a>
     </div>
 @endsection

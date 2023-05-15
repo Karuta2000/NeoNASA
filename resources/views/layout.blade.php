@@ -32,21 +32,20 @@
             color: white;
             background-color: #4f0f6d !important;
         }
-
     </style>
 </head>
 
 <body class="bg-space bg-gradient">
     <div class="py-0"
         style="background-image: url('https://images2.alphacoders.com/521/521477.jpg'); background-attachment: fixed;">
-        <x-navbar />
-        <div class="container bg-light bg-gradient py-5 shadow-lg" style="min-height: 90vh">
-            <div class="card shadow rounded p-0">
-
+        <div style="background-color: rgba(49, 0, 71, 0.5);">
+            <x-navbar />
+            <div class="container bg-gradient px-5 py-5 shadow-lg" style="min-height: 90vh; background-color: rgba(255, 255, 255, 0.5);">
                 @yield('content')
             </div>
+            <x-footer />
         </div>
-        <x-footer />
+
     </div>
 
 </body>

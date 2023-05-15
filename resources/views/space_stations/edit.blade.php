@@ -1,10 +1,10 @@
 @extends('layout')
 
 @section('content')
-    <div class="card-header bg-space text-white">
+    <div class="bg-space rounded text-white shadow p-3 mb-3">
         <h1 class="card-title">Edit Space Station</h1>
     </div>
-    <div class="card-body">
+    <div class="bg-space rounded text-white shadow p-3 mb-3">
         <form action="{{ route('space_stations.update', $space_station->id) }}" method="post">
             @csrf
             @method('PUT')
@@ -29,7 +29,7 @@
                 @endforeach
             </select>
             <br>
-            <button class="btn btn-space" type="submit">Update</button>
+            <button class="btn btn-light mt-2" type="submit">Update</button>
         </form>
     </div>
 @endsection

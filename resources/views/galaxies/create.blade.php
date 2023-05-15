@@ -1,11 +1,11 @@
 @extends('layout')
 
 @section('content')
-    <div class="card-header bg-space text-white">
+    <div class="bg-space rounded text-white shadow p-3 mb-3">
         <h1>Add Galaxy</h1>
     </div>
 
-    <div class="card-body">
+    <div class="bg-space rounded text-white shadow p-3 mb-3">
 
         <form action="{{ route('galaxies.store') }}" method="post">
             @csrf
@@ -21,7 +21,7 @@
             <label for="image_url" class="form-label">Image URL:</label>
             <input type="text" class="form-control" name="image_url" id="image_url" required>
             <br>
-            <button class="btn btn-space" type="submit">Add</button>
+            <button class="btn btn-light mt-2" type="submit">Add</button>
         </form>
     </div>
 @endsection

@@ -1,12 +1,12 @@
 @extends('layout')
 
 @section('content')
-    <div class="card-header bg-space text-white">
-        <h1 class="card-title">
-            Vesmírné stanice
+    <div class="bg-space rounded text-white shadow p-3 mb-3">
+        <h1>
+            Space stations
         </h1>
     </div>
-    <div class="card-body">
+    <div class="bg-space rounded text-white shadow p-3 mb-3">
 
         <ul class="list-group">
             @if ($space_stations->count() > 0)
@@ -29,6 +29,6 @@
 
         </ul>
         <hr>
-        <a class="btn btn-space" href="{{ route('space_stations.create') }}">Add Space Station</a>
+        <a class="btn btn-light" href="{{ route('space_stations.create') }}">Add Space Station</a>
     </div>
 @endsection
