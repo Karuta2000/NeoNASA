@@ -19,7 +19,7 @@
                     </p>
                 </div>
                 <img class="mt-2 rounded w-100 shadow" src="{{ $galaxy->image_url }}" alt="{{ $galaxy->name }}"
-                onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png';">
+                    onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png';">
 
 
             </div>
@@ -43,44 +43,60 @@
             </div>
         </div>
         <hr>
-
-        <form action="{{ route('galaxies.destroy', $galaxy->id) }}" method="post">
+        <form action="{{ route('space_stations.destroy', $space_station->id) }}" method="post">
             @csrf
             @method('DELETE')
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Actions
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ route('galaxies.edit', $galaxy->id) }}"><i class="fa fa-pencil"
+                                aria-hidden="true"></i>
+                            Edit</a></li>
+
+                    @if ($galaxy->spaceStations->count() > 0)
+                        <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                                data-bs-target="#deleteModal"><i class="fa fa-trash" aria-hidden="true"></i>
+                                Delete</button></li>
+                    @else
+                        <li><button class="dropdown-item" type="submit"><i class="fa fa-trash" aria-hidden="true"></i>
+                                Deletea</button></li>
+                    @endif
 
 
-            <a class="btn btn-warning" href="{{ route('galaxies.edit', $galaxy->id) }}">Edit</a>
 
+
+
+
+                </ul>
+            </div>
             @if ($galaxy->spaceStations->count() > 0)
-                <button type="button" class="btn btn-danger ms-2" data-bs-toggle="modal"
-                    data-bs-target="#deleteModal">Delete</button>
-                <div class="modal fade" id="deleteModal" tabindex="1" aria-labelledby="deleteModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header bg-danger text-white">
-                                <h1 class="modal-title fs-5" id="deleteModalLabel">Varování</h1>
-                                <button type="button" class="btn-close text-white" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body text-dark">
-                                Všechny stanice uvnitř této galaxie budou ztraceny! <br>
-                                Tato galaxie obsahuje následující počet vesmírných stanic:
-                                {{ $galaxy->spaceStations->count() }}<br>
-                                Přejete si i tak odstranit tuto galaxii?
-                            </div>
+            <div class="modal fade" id="deleteModal" tabindex="1" aria-labelledby="deleteModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-white">
+                            <h1 class="modal-title fs-5" id="deleteModalLabel">Varování</h1>
+                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-dark">
+                            Všechny stanice uvnitř této galaxie budou ztraceny! <br>
+                            Tato galaxie obsahuje následující počet vesmírných stanic:
+                            {{ $galaxy->spaceStations->count() }}<br>
+                            Přejete si i tak odstranit tuto galaxii?
+                        </div>
 
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-space" data-bs-dismiss="modal">Zrušit</button>
-                                <button type="submit" class="btn btn-danger">Odstranit</button>
-                            </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-space" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-danger">Delete</button>
                         </div>
                     </div>
                 </div>
-            @else
-                <button class="btn btn-danger ms-2" type="submit">Delete</button>
-            @endif
-
+            </div>
+        @endif
         </form>
 
 

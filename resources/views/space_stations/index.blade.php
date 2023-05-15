@@ -15,7 +15,8 @@
                         href="{{ route('space_stations.show', $space_station->id) }}">
                         <div class="d-flex align-items-start">
                             <img src="{{ $space_station->image_url }}" class="me-3" alt="Placeholder image" width="50"
-                                height="50" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png';" >
+                                height="50"
+                                onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png';">
                             <div class="flex-grow-1 align-middle">
                                 <h5 class="align-middle">{{ $space_station->name }}</h5>
                             </div>
@@ -31,4 +32,9 @@
         <hr>
         <a class="btn btn-light" href="{{ route('space_stations.create') }}">Add Space Station</a>
     </div>
+
+    
+
+
+
 @endsection

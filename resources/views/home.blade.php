@@ -6,7 +6,7 @@
     </div>
 
     <div class="bg-space rounded text-white shadow p-3 mb-3">
-        <p>
+        <p class="bg-light text-dark rounded p-2">
             Tato aplikace je skvělým nástrojem pro všechny nadšence kosmu, kteří se chtějí dozvědět více o vesmírných
             stanicích a galaxiích. Uživatelé mohou prohlížet jednotlivé SS a GX pomocí URL parametru ID, což umožňuje snadné
             vyhledávání konkrétních objektů. <br>
@@ -18,7 +18,6 @@
             Celkově je tato aplikace velmi užitečná pro procházení a prohlížení informací o různých SS a GX. Pokud by v
             budoucnu měla být rozšířena, například o možnost vyhledávání podle určitých kritérií nebo interaktivní mapu
             vesmíru, mohla by být ještě zajímavější a uživatelsky přívětivější. <br>
-            <hr>
         </p>
         <div style="text-align: center;">
             <img src="https://api.time.com/wp-content/uploads/2014/06/flame-nebula-astronomy-chandra-telescope-nasa-space.jpg"

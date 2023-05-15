@@ -30,7 +30,7 @@ class GalaxyController extends Controller
         Galaxy::create($request->all());
 
         return redirect()->route('galaxies.index')
-                         ->with('success', 'Galaxy created successfully.');
+                         ->with('message', 'Galaxy created successfully.');
     }
 
     public function show(Galaxy $galaxy)
@@ -54,13 +54,14 @@ class GalaxyController extends Controller
         $galaxy->update($request->all());
 
         return redirect()->route('galaxies.index')
-                         ->with('success', 'Galaxy updated successfully.');
+                         ->with('message', 'Galaxy updated successfully.');
     }
 
     public function destroy(Galaxy $galaxy)
     {
         $galaxy->delete();
         return redirect()->route('galaxies.index')
-                         ->with('success', 'Galaxy deleted successfully.');
+                         ->with('message', 'Galaxy deleted successfully.');
     }
+
 }

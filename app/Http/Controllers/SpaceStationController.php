@@ -33,7 +33,7 @@ class SpaceStationController extends Controller
         SpaceStation::create($request->all());
 
         return redirect()->route('space_stations.index')
-                         ->with('success', 'Space Station created successfully.');
+                         ->with('message', 'Space Station created successfully.');
     }
 
     public function show(SpaceStation $space_station)
@@ -59,13 +59,13 @@ class SpaceStationController extends Controller
         $spaceStation->update($request->all());
 
         return redirect()->route('space_stations.index')
-                         ->with('success', 'Space Station updated successfully.');
+                         ->with('message', 'Space Station updated successfully.');
     }
 
     public function destroy(SpaceStation $spaceStation)
     {
         $spaceStation->delete();
         return redirect()->route('space_stations.index')
-                         ->with('success', 'Space Station deleted successfully.');
+                         ->with('message', 'Space Station deleted successfully.');
     }
 }
