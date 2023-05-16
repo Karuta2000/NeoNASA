@@ -19,18 +19,15 @@
             budoucnu měla být rozšířena, například o možnost vyhledávání podle určitých kritérií nebo interaktivní mapu
             vesmíru, mohla by být ještě zajímavější a uživatelsky přívětivější. <br>
         </p>
-        <div style="text-align: center;">
-            <img src="https://api.time.com/wp-content/uploads/2014/06/flame-nebula-astronomy-chandra-telescope-nasa-space.jpg"
-                alt="" class="w-25 shadow text-center">
-            <img src="https://images.unsplash.com/photo-1615195627275-48660e9cd84f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
-                alt="" class="w-25 shadow text-center">
-            <img src="https://d3ezn0y6hdgq62.cloudfront.net/assets/photos/news/2020_06_03/large.jpeg" alt=""
-                class="w-25 shadow text-center">
-            <img src="https://stsci-opo.org/STScI-01FY71M4VEMWC4VZXFERDTE7AS.png" alt="" class="w-25 shadow mt-2 text-center">
-            <img src="https://cdn.mos.cms.futurecdn.net/qffhAnbCiasdroDChnLS6U.jpg" alt="" class="w-25 shadow mt-2 text-center">
-            <img src="https://cdn.spacetelescope.org/archives/images/large/heic0602e.jpg" alt=""
-                class="w-25 shadow mt-2 text-center">
+        <div class="row">
+            <img src="https://api.time.com/wp-content/uploads/2014/06/flame-nebula-astronomy-chandra-telescope-nasa-space.jpg" alt="" class="col-4 shadow rounded">
+            <img src="https://images.unsplash.com/photo-1615195627275-48660e9cd84f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80" alt="" class="col-4 shadow rounded">
+            <img src="https://d3ezn0y6hdgq62.cloudfront.net/assets/photos/news/2020_06_03/large.jpeg" alt="" class="col-4 shadow rounded">
+            <img src="https://stsci-opo.org/STScI-01FY71M4VEMWC4VZXFERDTE7AS.png" alt="" class="col-4 mt-4 shadow rounded">
+            <img src="https://cdn.mos.cms.futurecdn.net/qffhAnbCiasdroDChnLS6U.jpg" alt="" class="col-4 mt-4 shadow rounded">
+            <img src="https://cdn.spacetelescope.org/archives/images/large/heic0602e.jpg" alt="" class="col-4 mt-4 shadow rounded">
         </div>
+
 
 
 

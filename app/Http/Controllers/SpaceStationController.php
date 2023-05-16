@@ -58,7 +58,7 @@ class SpaceStationController extends Controller
 
         $spaceStation->update($request->all());
 
-        return redirect()->route('space_stations.index')
+        return redirect()->route('space_stations.show', $spaceStation)
                          ->with('message', 'Space Station updated successfully.');
     }
 

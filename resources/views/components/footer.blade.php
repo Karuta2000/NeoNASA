@@ -10,26 +10,26 @@
         <div class="row w-100 text-white mx-auto">
             <div class="col-4">
 
-                <ul class="list-group list-group-flush p-2">
+                <div class="list-group list-group-flush p-2">
                     <li class="list-group-item bg-space text-white"><b>View:</b></li>
-                    <li class="list-group-item bg-space text-white">Tynk00</li>
-                    <li class="list-group-item bg-space text-white">Smap01</li>
-                </ul>
+                    <a href="https://github.com/Karuta2000" class="list-group-item bg-space text-white">Tynk00</a>
+                    <a href="https://github.com/smap01" class="list-group-item bg-space text-white">Smap01</a>
+                </div>
             </div>
             <div class="col-4">
                 <ul class="list-group list-group-flush p-2">
                     <li class="list-group-item bg-space text-white"><b>Model:</b></li>
-                    <li class="list-group-item bg-space text-white">Tatv00</li>
-                    <li class="list-group-item bg-space text-white">Vanm34</li>
-                    <li class="list-group-item bg-space text-white">Mudp01</li>
+                    <a href="https://github.com/utikpuhlik" class="list-group-item bg-space text-white">Tatv00</a>
+                    <a href="https://github.com/Arkinsen" class="list-group-item bg-space text-white">Vanm34</a>
+                    <a href="https://github.com/Petr-Mudra?tab=overview&from=2023-05-01&to=2023-05-15" class="list-group-item bg-space text-white">Mudp01</a>
                 </ul>
             </div>
             <div class="col-4">
                 <ul class="list-group list-group-flush p-2">
                     <li class="list-group-item bg-space text-white"><b>Controller:</b></li>
-                    <li class="list-group-item bg-space text-white">Engt01</li>
-                    <li class="list-group-item bg-space text-white">Jezf00</li>
-                    <li class="list-group-item bg-space text-white">Birs03</li>
+                    <a href="https://github.com/tomaset22" class="list-group-item bg-space text-white">Engt01</a>
+                    <a href="https://github.com/Dreameryyy" class="list-group-item bg-space text-white">Jezf00</a>
+                    <a href="https://github.com/birossamuel613" class="list-group-item bg-space text-white">Birs03</a>
                 </ul>
 
             </div>

@@ -42,62 +42,103 @@
                 </ul>
             </div>
         </div>
-        <hr>
-        <form action="{{ route('space_stations.destroy', $space_station->id) }}" method="post">
-            @csrf
-            @method('DELETE')
-            <div class="btn-group dropup">
-                <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Actions
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{{ route('galaxies.edit', $galaxy->id) }}"><i class="fa fa-pencil"
-                                aria-hidden="true"></i>
-                            Edit</a></li>
+        <div class="btn-group dropup">
+            <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Actions
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{ route('galaxies.edit', $galaxy->id) }}"><i class="fa fa-pencil"
+                            aria-hidden="true"></i>
+                        Edit</a></li>
+                @if ($galaxy->spaceStations->count() > 0)
+                    <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#clearModal">
+                            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                            Clear stations
+                        </button></li>
+                @endif
 
-                    @if ($galaxy->spaceStations->count() > 0)
-                        <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
-                                data-bs-target="#deleteModal"><i class="fa fa-trash" aria-hidden="true"></i>
-                                Delete</button></li>
-                    @else
+
+
+
+                @if ($galaxy->spaceStations->count() > 0)
+                    <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#deleteModal"><i
+                                class="fa fa-trash" aria-hidden="true"></i>
+                            Delete</button></li>
+                @else
+                    <form action="{{ route('galaxies.destroy', $galaxy->id) }}" method="post">
+                        @csrf
+                        @method('DELETE')
                         <li><button class="dropdown-item" type="submit"><i class="fa fa-trash" aria-hidden="true"></i>
-                                Deletea</button></li>
-                    @endif
+                                Delete</button></li>
+                    </form>
+                @endif
 
 
 
 
 
 
-                </ul>
-            </div>
-            @if ($galaxy->spaceStations->count() > 0)
-            <div class="modal fade" id="deleteModal" tabindex="1" aria-labelledby="deleteModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header bg-danger text-white">
-                            <h1 class="modal-title fs-5" id="deleteModalLabel">Varování</h1>
-                            <button type="button" class="btn-close text-white" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body text-dark">
-                            Všechny stanice uvnitř této galaxie budou ztraceny! <br>
-                            Tato galaxie obsahuje následující počet vesmírných stanic:
-                            {{ $galaxy->spaceStations->count() }}<br>
-                            Přejete si i tak odstranit tuto galaxii?
-                        </div>
 
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-space" data-bs-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-danger">Delete</button>
+
+
+            </ul>
+        </div>
+
+        @if ($galaxy->spaceStations->count() > 0)
+            <form action="{{ route('galaxies.destroy', $galaxy->id) }}" method="post">
+                @csrf
+                @method('DELETE')
+                <div class="modal fade" id="deleteModal" tabindex="1" aria-labelledby="deleteModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header bg-danger text-white">
+                                <h1 class="modal-title fs-5" id="deleteModalLabel">Varování</h1>
+                                <button type="button" class="btn-close text-white" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-dark">
+                                Všechny stanice uvnitř této galaxie budou ztraceny! <br>
+                                Tato galaxie obsahuje následující počet vesmírných stanic:
+                                {{ $galaxy->spaceStations->count() }}<br>
+                                Přejete si i tak odstranit tuto galaxii?
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-space" data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
+
+            <form action="{{ route('galaxies.clear', $galaxy->id) }}" method="post">
+                @csrf
+                @method('DELETE')
+                <div class="modal fade" id="clearModal" tabindex="1" aria-labelledby="clearModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header bg-danger text-white">
+                                <h1 class="modal-title fs-5" id="clearModalLabel">Varování</h1>
+                                <button type="button" class="btn-close text-white" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-dark">
+                                Touto akcí budou všechny stanice uvnitř této galaxie budou smazány! <br>
+                                Přejete si provést tuto akci?
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-space" data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
         @endif
-        </form>
+
 
 
 

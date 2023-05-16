@@ -64,4 +64,12 @@ class GalaxyController extends Controller
                          ->with('message', 'Galaxy deleted successfully.');
     }
 
+    public function clear(Galaxy $galaxy)
+    {
+        $galaxy->spaceStations()->delete();
+
+        return redirect()->route('galaxies.show', $galaxy)
+                        ->with('message', 'All stations from this galaxy deleted successfully.');
+    }
+
 }
